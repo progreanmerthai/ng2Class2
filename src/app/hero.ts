@@ -1,4 +1,6 @@
 export class Hero {
-    id: number;
-    name: string;
+    constructor(private id: number, private name: string) {
+        this.id = id;
+        this.name = name;
+    }
 }

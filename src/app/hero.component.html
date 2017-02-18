@@ -1,6 +1,12 @@
 <h2> My Heroes</h2>
 <h1>{{title}}</h1>
-<h2>{{hero.name}} details!</h2>
+<form (ngSubmit)="register(heroForm)" #heroForm="ngForm">
+    <div>
+        <label>Hero name:</label>
+        <input type="text" class="form-control" id="name" required name="name" ngModel>
+        <button type="submit">Add</button>
+    </div>
+</form>
 
 <ul class="heroes">
     <li (click)=changeValue(hero) *ngFor="let hero of heroes">
